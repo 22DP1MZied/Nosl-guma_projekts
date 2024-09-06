@@ -1,6 +1,6 @@
 # Online Electronics Store
 
-A web app for browsing and purchasing electronics, inspired by Euronics.
+A web app for browsing and purchasing electronics, inspired by Euronics and RD electronics.
 
 ## Features
 
