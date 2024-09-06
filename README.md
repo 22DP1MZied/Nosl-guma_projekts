@@ -14,25 +14,5 @@ A web app for browsing and purchasing electronics, inspired by Euronics and RD e
 ## Tech Stack
 
 - **Frontend**: HTML, CSS, JavaScript (React/Vue)
-- **Backend**: Node.js, Express (or Django/Flask)
+- **Backend**: ???? (or Django/Flask)
 - **Database**: MongoDB, PostgreSQL, or MySQL
-- **Payments**: Stripe or PayPal
-
-## Installation
-
-1. Clone the repo: `git clone https://github.com/yourusername/online-electronics-store.git`
-2. Install dependencies: `npm install`
-3. Set up `.env` with your keys.
-4. Run the app: `npm run dev`
-
-## Contributing
-
-1. Fork the repo
-2. Create a branch: `git checkout -b feature-name`
-3. Commit changes: `git commit -m 'Add feature'`
-4. Push: `git push origin feature`
-5. Open a pull request
-
-## License
-
-[MIT](LICENSE)
