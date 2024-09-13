@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mana Tīmekļa Vietne</title>
+<title>Elektronikas Veikals</title>
 <style>
 /* Pamata stils */
 body {
@@ -13,11 +13,12 @@ padding: 0;
 display: flex;
 flex-direction: column;
 min-height: 100vh;
+background-color: #f2f2f2;
 }
 
 header {
-background-color: #4CAF50;
-padding: 10px;
+background-color: #0056b3;
+padding: 20px;
 color: white;
 text-align: center;
 }
@@ -26,11 +27,12 @@ nav ul {
 list-style-type: none;
 margin: 0;
 padding: 0;
+text-align: center;
 }
 
 nav ul li {
 display: inline;
-margin-right: 20px;
+margin-right: 30px;
 }
 
 nav ul li a {
@@ -43,6 +45,8 @@ main {
 display: flex;
 flex: 1;
 padding: 20px;
+max-width: 1200px;
+margin: 0 auto;
 }
 
 section {
@@ -52,16 +56,21 @@ padding-right: 20px;
 
 aside {
 flex: 1;
-background-color: #f4f4f4;
-padding: 10px;
+background-color: #f9f9f9;
+padding: 15px;
 border-left: 1px solid #ddd;
+}
+
+h2 {
+border-bottom: 2px solid #0056b3;
+padding-bottom: 10px;
 }
 
 footer {
 background-color: #333;
 color: white;
 text-align: center;
-padding: 10px;
+padding: 20px;
 position: relative;
 bottom: 0;
 width: 100%;
@@ -70,6 +79,23 @@ width: 100%;
 footer a {
 color: white;
 text-decoration: none;
+margin-left: 10px;
+}
+
+/* Produkta stils */
+.product-list img {
+width: 100%;
+max-width: 300px;
+height: auto;
+border: 1px solid #ddd;
+padding: 10px;
+margin-bottom: 20px;
+}
+
+.product-list p {
+margin: 0;
+font-size: 1.2em;
+font-weight: bold;
 }
 </style>
 </head>
@@ -77,39 +103,57 @@ text-decoration: none;
 
 <!-- Galvene ar navigāciju -->
 <header>
-<h1>Mana Tīmekļa Vietne</h1>
+<h1>Elektronikas Veikals</h1>
 <nav>
 <ul>
 <li><a href="#">Home</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Contact</a></li>
+<li><a href="#">Laptops</a></li>
+<li><a href="#">TV un Audio</a></li>
+<li><a href="#">Sadzīves Tehnika</a></li>
+<li><a href="#">Aksesuāri</a></li>
+<li><a href="#">Kontakti</a></li>
 </ul>
 </nav>
 </header>
 
 <!-- Galvenais saturs un sānu josla -->
 <main>
+<!-- Galvenā sadaļa ar produktiem -->
 <section>
-<h1>Laipni lūdzam!</h1>
-<h2>Mana pirmā tīmekļa lapa</h2>
-<p>Šī ir vienkārša HTML tīmekļa vietne, kurā ir galvene, galvenā sadaļa, sānu josla un kājene. Šeit jūs varat ievietot dažādus elementus, piemēram, tekstus, attēlus un saites.</p>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa_Z4jRBsvQU0QoTaIwYRz9fQbmNg85SSimw&s" alt="Piemērs attēls">
+<h2>Jaunākie produkti</h2>
+
+<div class="product-list">
+<h3>Samsung Galaxy S23</h3>
+<img src="https://via.placeholder.com/300x200" alt="Samsung Galaxy S23">
+<p>Cena: 799€</p>
+<p>Moderns viedtālrunis ar augstas kvalitātes kameru un jaudīgu procesoru.</p>
+
+<h3>Dell Inspiron 15</h3>
+<img src="https://via.placeholder.com/300x200" alt="Dell Inspiron 15">
+<p>Cena: 999€</p>
+<p>Spēcīgs klēpjdators ar 15 collu ekrānu, piemērots gan darbam, gan izklaidei.</p>
+
+<h3>LG OLED TV 55''</h3>
+<img src="https://via.placeholder.com/300x200" alt="LG OLED TV">
+<p>Cena: 1299€</p>
+<p>55 collu OLED televizors ar 4K izšķirtspēju un izcilu attēla kvalitāti.</p>
+</div>
 </section>
 
-<!-- Sānu josla -->
+<!-- Sānu josla ar piedāvājumiem -->
 <aside>
-<h2>Saistītie raksti</h2>
+<h2>Populārākie piedāvājumi</h2>
 <ul>
-<li><a href="#">Raksts 1</a></li>
-<li><a href="#">Raksts 2</a></li>
-<li><a href="#">Raksts 3</a></li>
+<li><a href="#">Apple MacBook Air - 1099€</a></li>
+<li><a href="#">Sony PlayStation 5 - 499€</a></li>
+<li><a href="#">Bose QuietComfort Austiņas - 299€</a></li>
 </ul>
 </aside>
 </main>
 
 <!-- Kājene -->
 <footer>
-<p>&copy; 2024 Mana Tīmekļa Vietne | <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
+<p>&copy; 2024 Elektronikas Veikals | <a href="#">Privātuma politika</a> | <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
 </footer>
 
 </body>
