@@ -81,7 +81,8 @@
   }
   
   .card-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
     gap: 20px;
     padding: 50px 20px;
