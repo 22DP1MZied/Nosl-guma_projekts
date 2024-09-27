@@ -7,64 +7,81 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <!-- Navigācijas josla -->
 <nav class="navbar">
-<ul>
-<li><a href="#">Sākums</a></li>
-<li><a href="#">Produkti</a></li>
-<li><a href="#">Par mums</a></li>
-<li><a href="#">Kontakti</a></li>
-</ul>
+  <ul class="menu">
+    <li><a href="#">Sākums</a></li>
+    <li><a href="#">Produkti</a></li>
+    <li class="dropdown">
+      <a href="#">Pakalpojumi</a>
+      <ul class="dropdown-content">
+        <li><a href="#">Auto Remonts</a></li>
+        <li><a href="#">Eļļas maiņa</a></li>
+        <li><a href="#">Apkope</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Par mums</a></li>
+    <li><a href="#">Kontakti</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
 </nav>
 
 <!-- Galvenais virsraksts -->
 <header class="header">
-<h1>Laipni lūdzam manā mašīnas lapā</h1>
-<p>Aplūkojiet manus piedāvājumus un izvēlieties sev tīkamāko mašīnu!</p>
+  <h1>Laipni lūdzam manā mašīnas lapā</h1>
+  <p>Aplūkojiet manus piedāvājumus un izvēlieties sev tīkamāko mašīnu!</p>
 </header>
 
 <!-- Kartīšu izkārtojums -->
 <section class="card-container">
-<div class="card">
-<img src="https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHsCEtzEwF-SlMwJZKUycmbmJ6an6QD4_I3taTmV-aUkxO0grD8OajS_duTTPpm9I-tKpseuQsETCNQZWoC7GlUCCeSOQ4JcCEpzMDGASZF4_iGgC8ZkcmBkYWCuAjEgGEODjKy3KKUgsSszVK89MKckQ1DAgEgizu7iGOHr6BAMAn4s5XOkAAAA?wid=850" alt="Produkts 1">
-<h2>Audi E-Tron</h2>
-<p>Īss produkta apraksts.</p>
-<button>Pievienot grozam</button>
-</div>
-<div class="card">
-<img src="https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHsCEtzEwF-SlMwJZKUycmbmJ6an6QD4_I3taTmV-aUkxO0grT2ddr37QpqLUVT3Xey5MkPIsv2wZwsAK1MXoASSYngEJvl1AgtObAUyCzJsLIuxAfCYrZgYG1gogI5IBBPj4SotyChKLEnP1yjNTSjIENQyIBMLsLq4hjp4-wQBAHJaY6QAAAA?wid=850" alt="Produkts 2">
-<h2>Audi Q5</h2>
-<p>Īss produkta apraksts.</p>
-<button>Pievienot grozam</button>
-</div>
-<div class="card">
-<img src="https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHsCEtzEwF-SlMwJZKUycmbmJ6an6QD4_I3taTmV-aUkxO0grTxNXu7uebK4Wa8-m020r5pvtvP7wIwMrUBfjIiDBzAYk-MKBBKcnA5gEmXcARASA-Ey2zAwMrBVARiQDCPDxlRblFCQWJebqlWemlGQIahgQCYTZXVxDHD19ggFVylB_6QAAAA?wid=850" alt="Produkts 3">
-<h2>Audi Q5 E-Tron</h2>
-<p>Īss produkta apraksts.</p>
-<button>Pievienot grozam</button>
-</div>
+  <div class="card">
+    <img src="https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHsCEtzEwF-SlMwJZKUycmbmJ6an6QD4_I3taTmV-aUkxO0grD8OajS_duTTPpm9I-tKpseuQsETCNQZWoC7GlUCCeSOQ4JcCEpzMDGASZF4_iGgC8ZkcmBkYWCuAjEgGEODjKy3KKUgsSszVK89MKckQ1DAgEgizu7iGOHr6BAMAn4s5XOkAAAA?wid=850" alt="Audi E-Tron">
+    <h2>Audi E-Tron</h2>
+    <p>Īss produkta apraksts.</p>
+    <button class="learn-more" onclick="openModal()">Pievienot grozam</button>
+  </div>
+  <div class="card">
+    <img src="https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHsCEtzEwF-SlMwJZKUycmbmJ6an6QD4_I3taTmV-aUkxO0grT2ddr37QpqLUVT3Xey5MkPIsv2wZwsAK1MXoASSYngEJvl1AgtObAUyCzJsLIuxAfCYrZgYG1gogI5IBBPj4SotyChKLEnP1yjNTSjIENQyIBMLsLq4hjp4-wQBAHJaY6QAAAA?wid=850" alt="Audi Q5">
+    <h2>Audi Q5</h2>
+    <p>Īss produkta apraksts.</p>
+    <button class="learn-more" onclick="openModal()">Pievienot grozam</button>
+  </div>
+  <div class="card">
+    <img src="https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHsCEtzEwF-SlMwJZKUycmbmJ6an6QD4_I3taTmV-aUkxO0grTxNXu7uebK4Wa8-m020r5pvtvP7wIwMrUBfjIiDBzAYk-MKBBKcnA5gEmXcARASA-Ey2zAwMrBVARiQDCPDxlRblFCQWJebqlWemlGQIahgQCYTZXVxDHD19ggFVylB_6QAAAA?wid=850" alt="Audi Q5 E-Tron">
+    <h2>Audi Q5 E-Tron</h2>
+    <p>Īss produkta apraksts.</p>
+    <button class="learn-more" onclick="openModal()">Pievienot grozam</button>
+  </div>
+  <div class="card">
+    <img src="https://mediaservice.audi.com/media/live/50900/fly1400x601n1/4a2c2y/2024.png?wid=850" alt="Audi A4">
+    <h2>Audi A4</h2>
+    <p>Īss produkta apraksts.</p>
+    <button class="learn-more" onclick="openModal()">Pievienot grozam</button>
+  </div>
+  <div class="card">
+    <img src="https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHsCEtzEwF-SlMwJZKUycmbmJ6an6QD4_I3taTmV-aUkxO0grT0fNWy4HQ5dNLLKTN7H3Vxm-E19VwsAK1MV4A0gwTwMSfAVAglOaAUyCzDsAIppAfCZ7ZgYG1gogI5IBBPj4SotyChKLEnP1yjNTSjIENQyIBMLsLq4hjp4-wQBR-vwh6QAAAA?wid=850" alt="Audi A3">
+    <h2>Audi A3</h2>
+    <p>Īss produkta apraksts.</p>
+    <button class="learn-more" onclick="openModal()">Pievienot grozam</button>
+  </div>
+  <div class="card">
+    <img src="https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHsCEtzEwF-SlMwJZKUycmbmJ6an6QD4_I3taTmV-aUkxO0grz8q__3Y7CSyt-BjwUyQp_kno-cbfQQysQF2M2kCCuQZI8L0FEpy8DGASZF4fiKgB8ZksmRkYWCuAjEgGEODjKy3KKUgsSszVK89MKckQ1DAgEgizu7iGOHr6BAMAN3NPLOkAAAA?wid=850" alt="Audi A7">
+    <h2>Audi A7</h2>
+    <p>Īss produkta apraksts.</p>
+    <button class="learn-more" onclick="openModal()">Pievienot grozam</button>
+  </div>
 </section>
 
-<!-- Otrā kartīšu rinda -->
-<section class="card-container">
-<div class="card">
-<img src="https://mediaservice.audi.com/media/live/50900/fly1400x601n1/4a2c2y/2024.png?wid=850" alt="Produkts 4">
-<h2>Audi A4</h2>
-<p>Īss produkta apraksts.</p>
-<button>Pievienot grozam</button>
+<!-- Modālais logs -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Audi E-Tron</h2>
+    <p>Šeit ir vairāk informācijas par Audi E-Tron modeli.</p>
+  </div>
 </div>
-<div class="card">
-<img src="https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHsCEtzEwF-SlMwJZKUycmbmJ6an6QD4_I3taTmV-aUkxO0grT0fNWy4HQ5dNLLKTN7H3Vxm-E19VwsAK1MV4A0gwTwMSfAVAglOaAUyCzDsAIppAfCZ7ZgYG1gogI5IBBPj4SotyChKLEnP1yjNTSjIENQyIBMLsLq4hjp4-wQBR-vwh6QAAAA?wid=850" alt="Produkts 5">
-<h2>Audi A3</h2>
-<p>Īss produkta apraksts.</p>
-<button>Pievienot grozam</button>
-</div>
-<div class="card">
-<img src="https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHsCEtzEwF-SlMwJZKUycmbmJ6an6QD4_I3taTmV-aUkxO0grz8q__3Y7CSyt-BjwUyQp_kno-cbfQQysQF2M2kCCuQZI8L0FEpy8DGASZF4fiKgB8ZksmRkYWCuAjEgGEODjKy3KKUgsSszVK89MKckQ1DAgEgizu7iGOHr6BAMAN3NPLOkAAAA?wid=850" alt="Produkts 6">
-<h2>Audi A7</h2>
-<p>Īss produkta apraksts.</p>
-<button>Pievienot grozam</button>
-</div>
-</section>
+
+<script src="scripts.js"></script>
 </body>
 </html>
