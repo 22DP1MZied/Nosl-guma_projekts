@@ -2,171 +2,143 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
-  }
-  
-  .navbar {
+}
+
+/* Navigācijas izvēlne */
+.navbar {
     background-color: #333;
     padding: 10px 20px;
-  }
-  
-  .navbar .menu {
+    position: relative;
+}
+
+.navbar ul {
     display: flex;
     justify-content: center;
     list-style: none;
-  }
-  
-  .navbar .menu li {
-    position: relative;
+}
+
+.navbar ul li {
     margin: 0 20px;
-  }
-  
-  .navbar .menu li a {
+    position: relative; /* Lai varētu pievienot dropdown */
+}
+
+.navbar a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
     padding: 10px;
-    display: inline-block;
-  }
-  
-  .navbar .menu li:hover .dropdown-content {
-    display: block;
-  }
-  
-  .navbar .dropdown-content {
+}
+
+.navbar a:hover {
+    color: #ff4081; /* Krāsa, kad peles kursors ir virs */
+}
+
+/* Dropdown stils */
+.dropdown {
     display: none;
     position: absolute;
-    background-color: #333;
-    padding: 10px;
+    background-color: #444;
+    margin-top: 10px;
     border-radius: 5px;
     z-index: 1;
-  }
-  
-  .navbar .dropdown-content li {
+}
+
+.navbar ul li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
     margin: 0;
-  }
-  
-  .navbar .dropdown-content li a {
+}
+
+.dropdown a {
+    display: block;
     padding: 10px;
     color: white;
-    display: block;
-  }
-  
-  .hamburger {
+}
+
+.dropdown a:hover {
+    background-color: #555; /* Background krāsa, kad peles kursors ir virs */
+}
+
+/* Hamburger izvēlne */
+.hamburger {
     display: none;
+    flex-direction: column;
     cursor: pointer;
-    font-size: 2em;
-    color: white;
-  }
-  
-  .header {
-    text-align: center;
-    padding: 50px;
-    background: linear-gradient(to right, #ff6f61, #ff3d2e);
-    color: white;
-  }
-  
-  .header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-  }
-  
-  .header p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-  }
-  
-  .card-container {
+}
+
+.hamburger .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+/* Kartīšu izkārtojums */
+.card-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-    padding: 50px 20px;
-    margin: 20px auto;
-    width: 80%;
-  }
-  
-  .card {
-    background: linear-gradient(to bottom right, #ffffff, #f9f9f9);
+    padding: 20px;
+}
+
+/* Kartītes stils */
+.card {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 5px 5px 15px #bfbfbf, -5px -5px 15px #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
-    width: 300px;
-    text-align: center;
-  }
-  
-  .card img {
+}
+
+.card img {
     width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  .card h2 {
-    font-size: 1.5em;
-    margin: 15px 0;
-  }
-  
-  .card p {
-    font-size: 1em;
-    color: #666;
-    margin: 10px 15px;
-  }
-  
-  .card button {
-    background: linear-gradient(to right, #ff6f61, #ff3d2e);
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.card p {
+    padding: 0 10px;
+    text-align: center;
+}
+
+/* Poga stils */
+.card button {
+    background: linear-gradient(90deg, #ff4081, #ff80ab);
     color: white;
     border: none;
-    padding: 10px 20px;
-    margin: 15px 0;
-    cursor: pointer;
-    font-size: 1em;
+    padding: 10px;
+    margin: 10px 0;
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card button:hover {
-    background: linear-gradient(to right, #ff3d2e, #ff6f61);
-    transform: scale(1.1);
-  }
-  
-  @media (max-width: 900px) {
-    .card-container {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .navbar .hamburger {
-      display: block;
-    }
-    
-    .navbar .menu {
-      display: none;
-    }
-  
-    .navbar .menu.active {
-      display: flex;
-      flex-direction: column;
-      background-color: #333;
-      position: absolute;
-      top: 60px;
-      width: 100%;
-      z-index: 100;
-    }
-  }
-  
-  .modal {
-    display: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.card button:hover {
+    background: linear-gradient(90deg, #ff80ab, #ff4081);
+    transform: scale(1.05); /* Poga palielinās, kad peles kursors ir virs */
+}
+
+/* Kartītes hover efekts */
+.card:hover {
+    transform: scale(1.05); /* Kartīte palielinās, kad peles kursors ir virs */
+    box-shadow: 10px 10px 20px #bfbfbf, -10px -10px 20px #ffffff;
+}
+
+/* Modālais logs */
+.modal {
+    display: none; /* Paslēpt sākumā */
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -174,28 +146,49 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  .modal-content {
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-  }
-  
-  .close {
+    border-radius: 10px;
+}
+
+.close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
-  
+}
+
+/* Responsīva hamburger izvēlne */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none; /* Paslēpt uz maziem ekrāniem */
+    }
+
+    .hamburger {
+        display: flex; /* Rādīt hamburgeru */
+    }
+
+    .navbar.active ul {
+        display: flex; /* Rādīt, kad ir aktivizēta */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Pārvietot uz leju zem hamburgera */
+        width: 100%;
+        background-color: #333;
+        z-index: 2;
+    }
+}
