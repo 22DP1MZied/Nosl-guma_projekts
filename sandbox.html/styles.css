@@ -31,49 +31,52 @@ body {
     color: white;
     text-decoration: none;
     padding: 10px;
-    transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #ff6347;
+    color: #ff4081; /* Krāsa, kad peles kursors ir virs */
 }
 
-.dropdown-content {
+/* Dropdown stils */
+.dropdown {
     display: none;
     position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    z-index: 1;
+    background-color: #444;
     margin-top: 10px;
+    border-radius: 5px;
+    z-index: 1;
 }
 
-.dropdown:hover .dropdown-content {
+.navbar ul li:hover .dropdown {
     display: block;
 }
 
-.dropdown-content a {
-    padding: 10px;
+.dropdown li {
+    margin: 0;
 }
 
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: white;
+}
+
+.dropdown a:hover {
+    background-color: #555; /* Background krāsa, kad peles kursors ir virs */
+}
+
+/* Hamburger izvēlne */
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
 }
 
-.bar {
+.hamburger .bar {
     height: 3px;
     width: 25px;
     background-color: white;
-    margin: 4px 0;
-}
-
-/* Galvenais virsraksts */
-.header {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #4CAF50;
-    color: white;
+    margin: 3px 0;
 }
 
 /* Kartīšu izkārtojums */
@@ -84,12 +87,13 @@ body {
     padding: 20px;
 }
 
+/* Kartītes stils */
 .card {
-    background: white;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 15px #bfbfbf, -5px -5px 15px #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
-    transition: transform 0.2s ease;
 }
 
 .card img {
@@ -99,40 +103,50 @@ body {
 }
 
 .card h2 {
-    padding: 15px;
-    font-size: 1.5em;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    text-align: center;
 }
 
 .card p {
-    padding: 0 15px 15px;
-    color: #555;
+    padding: 0 10px;
+    text-align: center;
 }
 
-.learn-more {
-    background-color: #4CAF50;
+/* Poga stils */
+.card button {
+    background: linear-gradient(90deg, #ff4081, #ff80ab);
     color: white;
     border: none;
     padding: 10px;
-    cursor: pointer;
+    margin: 10px 0;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
 }
 
-.learn-more:hover {
-    background-color: #45a049;
+.card button:hover {
+    background: linear-gradient(90deg, #ff80ab, #ff4081);
+    transform: scale(1.05); /* Poga palielinās, kad peles kursors ir virs */
+}
+
+/* Kartītes hover efekts */
+.card:hover {
+    transform: scale(1.05); /* Kartīte palielinās, kad peles kursors ir virs */
+    box-shadow: 10px 10px 20px #bfbfbf, -10px -10px 20px #ffffff;
 }
 
 /* Modālais logs */
 .modal {
-    display: none;
+    display: none; /* Paslēpt sākumā */
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
@@ -158,20 +172,23 @@ body {
     cursor: pointer;
 }
 
-/* Responsīvs dizains */
+/* Responsīva hamburger izvēlne */
 @media (max-width: 768px) {
     .navbar ul {
-        flex-direction: column;
-        display: none;
-        position: absolute;
-        top: 50px;
-        width: 100%;
-        left: 0;
+        display: none; /* Paslēpt uz maziem ekrāniem */
     }
-    .navbar.active ul {
-        display: flex;
-    }
+
     .hamburger {
-        display: flex;
+        display: flex; /* Rādīt hamburgeru */
+    }
+
+    .navbar.active ul {
+        display: flex; /* Rādīt, kad ir aktivizēta */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Pārvietot uz leju zem hamburgera */
+        width: 100%;
+        background-color: #333;
+        z-index: 2;
     }
 }
