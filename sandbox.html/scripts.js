@@ -1,22 +1,17 @@
-function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('active');
-}
-
-function openModal() {
-    const modal = document.getElementById("myModal");
-    modal.style.display = "block";
+function openModal(title, description) {
+    document.getElementById('modal-title').innerText = title;
+    document.getElementById('modal-description').innerText = description;
+    document.getElementById('myModal').style.display = 'block';
 }
 
 function closeModal() {
-    const modal = document.getElementById("myModal");
-    modal.style.display = "none";
+    document.getElementById('myModal').style.display = 'none';
 }
 
-// Close the modal when the user clicks anywhere outside of it
+// Close the modal when clicking outside of the modal content
 window.onclick = function(event) {
-    const modal = document.getElementById("myModal");
-    if (event.target == modal) {
-        modal.style.display = "none";
+    const modal = document.getElementById('myModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
     }
 }
