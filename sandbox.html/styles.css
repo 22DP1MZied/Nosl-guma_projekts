@@ -212,6 +212,17 @@ header {
 .modal .close:hover {
     color: #333;
 }
+footer {
+background-color: #333;
+margin-top: 100px;
+color: white;
+text-align: center;
+font-size: 18px;
+font-weight: 100;
+padding-top: 10px;
+padding-bottom: 10px;
+
+}
 
 /* Pielāgojumi mazām ierīcēm */
 @media (max-width: 768px) {
