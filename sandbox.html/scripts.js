@@ -1,17 +1,43 @@
-function openModal(title, description) {
-    document.getElementById('modal-title').innerText = title;
-    document.getElementById('modal-description').innerText = description;
-    document.getElementById('myModal').style.display = 'block';
-}
-
-function closeModal() {
-    document.getElementById('myModal').style.display = 'none';
-}
-
-// Close the modal when clicking outside of the modal content
-window.onclick = function(event) {
-    const modal = document.getElementById('myModal');
-    if (event.target === modal) {
-        modal.style.display = 'none';
+/*// Function to open the modal
+function openModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "flex"; // Display the modal with flex to center it
     }
-}
+    
+    // Function to close the modal
+    function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+    }
+    
+    // Close the modal if the user clicks anywhere outside of the modal
+    window.onclick = function(event) {
+    var modal = document.getElementById("myModal");
+    if (event.target == modal) {
+    closeModal();
+    }
+    }*/
+// Function to open the modal with dynamic content
+function openModal(carTitle, carDescription) {
+    var modal = document.getElementById("myModal");
+    
+    // Update modal content dynamically
+    modal.querySelector("h2").textContent = carTitle;
+    modal.querySelector("p").textContent = carDescription;
+    
+    modal.style.display = "flex"; // Display the modal with flex to center it
+    }
+    
+    // Function to close the modal
+    function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+    }
+    
+    // Close the modal if the user clicks outside the modal
+    window.onclick = function(event) {
+    var modal = document.getElementById("myModal");
+    if (event.target == modal) {
+    closeModal();
+    }
+    }
