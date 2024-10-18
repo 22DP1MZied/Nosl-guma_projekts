@@ -11,6 +11,7 @@ body {
     color: #333;
 }
 
+/* Logo */
 .logo {
     border-radius: 200px;
     width: 100px;
@@ -29,28 +30,6 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
-}
-
-.dark-mode {
-    background-color: black;
-    color: white;
-}
-
-.dark-mode header {
-    background-color: black;
-    color: white;
-}
-
-.dark-mode div {
-    background-color: gray;
-    color: white;
-}
-.dark-mode div p {
-    background-color: gray;
-    color: white;
-}
-.dark-mode header p {
-    color: white;
 }
 
 .menu li {
@@ -106,6 +85,7 @@ body {
     cursor: pointer;
 }
 
+/* Header stils */
 header {
     background-color: #333;
     color: white;
@@ -115,7 +95,6 @@ header {
     padding: 20px;
 }
 
-/* Header stils */
 .header {
     text-align: center;
     padding: 50px 20px;
@@ -234,16 +213,42 @@ header {
 .modal .close:hover {
     color: #333;
 }
-footer {
-background-color: #333;
-margin-top: 100px;
-color: white;
-text-align: center;
-font-size: 18px;
-font-weight: 100;
-padding-top: 10px;
-padding-bottom: 10px;
 
+/* Footer */
+footer {
+    background-color: #333;
+    margin-top: 100px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 100;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode header {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode .card {
+    background-color: #444;
+    border-color: #555;
+}
+
+.dark-mode .modal-content {
+    background-color: #333;
+}
+
+.dark-mode .modal-content h2,
+.dark-mode .modal-content p {
+    color: white;
 }
 
 /* Pielāgojumi mazām ierīcēm */
@@ -266,6 +271,28 @@ padding-bottom: 10px;
         max-width: 350px;
     }
 }
+.car-details {
+    text-align: center;
+    padding: 20px;
+}
+
+.car-details img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.car-details h1 {
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+.car-details p {
+    font-size: 18px;
+    color: #666;
+}
+
 
 @media (max-width: 600px) {
     .header h1 {
